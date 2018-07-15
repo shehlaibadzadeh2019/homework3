@@ -1,10 +1,12 @@
 html,body {
     margin: 0;
     padding: 0;
+    font-family: Verdana;
 }
 
 body {
-    background-image: url("background.png");
+    background-image: url("../images/background.png");
+    background-size: cover;
 }
 .container {
     max-width: 1280px;
@@ -22,35 +24,34 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    background-image: url(logo.png);
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     padding-left: 60px;
     height: 45px;
 }
 .logo:hover {
-    background-image: url(logohover.png);
+    background-image: url("../images/logohover.png");
 }
 .logo:hover .logo__text {
     color: #f26522;
 }
 .logo__text {
-    margin: 0;
-    font-family: Verdana;
+    margin: 0;    
     color:  white;
     font-size: 29px;
     font-weight: 700;
     line-height: 0.7;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .logo__text span{
-    font-family: Verdana;
     color:  inherit;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
 }
 .contacts {
-    font-family: Verdana;
+    
     color:  #ffffff;
     font-size: 18px;
 }
@@ -67,6 +68,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .content__item {
     display: flex;
     flex-direction: column;
@@ -75,11 +77,13 @@ header {
     width: auto;
     margin-right: 60px;
     margin-bottom: 50px;
-
 }
-.content__item:hover .content__item__info{
+.content__item__image:hover .content__item__info{
     display: flex;
     bottom: 0;
+}
+.content__item__image:hover~.content__item__text{
+    color: #f26522;
 }
 
 .content__item:nth-child(3n) {
@@ -119,7 +123,7 @@ header {
 }
 .content__item__info__price span{
     display: block;
-    font-family: Verdana;
+    
     color:  #ffffff;
     font-size: 20px;
     letter-spacing: -2px;
@@ -129,8 +133,7 @@ header {
     position: relative;
     text-decoration: none;
     margin-right: 40px;
-    margin-top: 15px;
-    font-family: Verdana;
+    margin-top: 15px;    
     color: #ffffff;
     font-size: 14px;
 }
@@ -150,9 +153,9 @@ header {
     transform: translate(100%, -50%) rotate(-45deg);
 }
 
-.content__item__text {
-    font-family: Verdana;
+.content__item__text {    
     color:  #ffffff;
+    text-decoration: none;
     font-size: 18px;
 }
 .footer {
@@ -161,8 +164,7 @@ header {
     align-items: center;
     text-align: center;
 }
-.copyright {
-    font-family: Verdana;
+.copyright {    
     color:  #ffffff;
     font-size: 12px;
     margin: 0;
